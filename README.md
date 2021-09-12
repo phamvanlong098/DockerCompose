@@ -1,5 +1,8 @@
 # ATTENTION
 docker volume create --opt device=...........................\DockerCompose\sites --opt type=none --opt o=bind dockercompose_dir-site
+
+## delete all file in db
+
 docker compose up
 
 ![wordpress](https://user-images.githubusercontent.com/56588133/132972459-960894d6-d460-466d-96b8-5bfcf1760232.png)
