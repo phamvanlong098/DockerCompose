@@ -7,7 +7,7 @@ networks:
 volumes: 
   dir-site:
     driver_opts: 
-      device: ./
+      device: ./sites
       o: bind
       type: none
 
@@ -23,7 +23,7 @@ services:
     networks: 
       - my-network
     volumes:
-      - dir-site:/home
+      - dir-site:/home/sites
 
   # APACHE
   my-httpd:
@@ -34,7 +34,7 @@ services:
     networks: 
       - my-network
     volumes: 
-      - dir-site:/home
+      - dir-site:/home/sites
       - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
     ports: 
       - "9999:80"
